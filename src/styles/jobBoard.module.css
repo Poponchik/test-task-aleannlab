@@ -1,0 +1,117 @@
+.container {
+    @apply w-full h-full bg-grey-100 m-0 mt-0 p-2
+}
+
+.inner_container {
+    @apply m-auto min-h-screen w-[25rem]
+}
+
+.job_bar {
+    @apply w-full drop-shadow-[0_2px_1px_rgba(0,0,0,0.18)] flex mt-2 py-6 px-4 rounded-lg bg-grey-100 flex-wrap
+}
+
+.content_div {
+    @apply flex items-center order-2
+}
+
+.job_info {
+    @apply ml-6
+}
+
+.image {
+    @apply w-full
+}
+
+.job_image {
+    @apply min-w-[6rem] h-24 object-cover rounded-full
+}
+
+.job_title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    @apply font-bold text-grey-700 w-[14rem] overflow-hidden
+}
+
+.hospital_name {
+    @apply mt-2 text-base font-normal text-grey-300
+}
+
+.location_div {
+    @apply mt-2 text-grey-300 flex gap-1 items-center
+}
+
+.book_mark {
+    @apply hidden
+}
+
+.date_block {
+    @apply relative w-full my-3 order-1
+}
+
+.date_div {
+    @apply absolute right-0 bottom-0 text-grey-300 flex gap-1
+}
+
+.pages {
+    @apply bg-grey-100 flex w-min py-3 px-5 m-auto gap-5 my-12 rounded-md text-grey-300 cursor-pointer items-center drop-shadow-[0_2px_1px_rgba(0,0,0,0.18)]
+}
+
+.page {
+    @apply text-xl font-bold 
+}
+
+.activePage {
+    @apply text-blue text-xl font-bold relative  block m-auto
+}
+
+.activePage::after{
+    bottom: -14px;
+    @apply w-[200%] h-1 content-['']  block bg-blue absolute right-[-50%] bottom-[-14px]
+}
+
+.pages_div {
+    @apply px-10 flex gap-5
+}
+
+.line {
+    @apply h-5 w-px border-l border-grey-200
+}
+
+@screen sm {
+    .inner_container {
+        @apply m-auto min-h-screen w-[87.5rem]
+    }
+
+    .job_bar {
+        @apply drop-shadow-sm mt-2 py-6 px-4 flex flex-nowrap bg-white
+    }
+
+    .pages {
+        @apply drop-shadow-sm bg-white
+    }
+
+    .content_div {
+        @apply m-0 order-1
+    }
+
+    .date_block {
+        @apply m-0 order-2
+    }
+
+    .job_image {
+        @apply w-24 h-24 object-cover rounded-full
+    }
+
+    .job_title {
+        @apply font-bold text-grey-700 w-[50rem]
+    }
+
+    .book_mark {
+        @apply text-grey-300 block absolute right-0
+    }
+
+    .line {
+        @apply border-grey-100
+    }
+}
