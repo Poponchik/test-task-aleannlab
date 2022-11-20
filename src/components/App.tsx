@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/testing-task-aleannlab">
       <Routes>
         <Route path="/" element={<JobBoard />} />
         <Route path="/jobDetailed" element={<JobDetailed />} />

@@ -8,10 +8,10 @@ import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { GoogleMap, LoadScript, MarkerF } from "@react-google-maps/api";
 import { formateDate } from "../utils";
+import config from "../config";
 
 function JobDetailed() {
   const [description, setDescription] = useState<string[]>([]);
-
   const jobsInfo = useSelector((state: any) => state.jobsReducer);
 
   function getDescription() {
@@ -137,7 +137,7 @@ function JobDetailed() {
               </div>
               <img
                 className={styles.bg_contacts_image}
-                src="/images/Contacts Dark.png"
+                src={`${config.ghHomepage}/images/ContactsDark.png`}
               ></img>
             </div>
             <div className={styles.map}>
